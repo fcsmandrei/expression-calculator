@@ -55,13 +55,13 @@ function expressionCalculator(expr) {
     
     function culcNeighbors(operator, first, second) {
         switch(operator) {
-            case '+': return  second + first;
-            case '-': return  second - first;
-            case '*': return  second * first;
-            case '/': if(first === 0){
+            case '+': return   first + second;
+            case '-': return   first - second;
+            case '*': return   first * second;
+            case '/': if(second === 0){
                 throw new Error('TypeError: Division by zero.');
             } else { 
-                return first  / second;
+                return   first / second ;
             }
         }
     };
